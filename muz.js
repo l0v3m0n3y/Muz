@@ -5,7 +5,7 @@ class muz{
     }
     async short_url(url){
         let req=await fetch(`${this.api}/`,{method:"POST",body:JSON.stringify({"url":url}),headers: this.headers});
-        return await req.text();
+        return await req.json();
     }
 }
 module.exports = {muz};
